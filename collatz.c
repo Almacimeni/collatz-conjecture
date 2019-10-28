@@ -8,7 +8,7 @@ int main(){
     int sayi = 0;
 
     do{
-        printf("Lutfen pozitif bir tamsayi giriniz: ");
+        printf("Lutfen pozitif bir tam sayi giriniz: ");
         scanf("%d",&sayi);
     }while(sayi<=0);
     
