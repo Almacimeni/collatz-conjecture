@@ -2,7 +2,6 @@
 #include <unistd.h>
 #include <sys/types.h>
 
-
 void collatz(int sayi);
 
 int main(){
@@ -14,17 +13,14 @@ int main(){
     }while(sayi<=0);
     
     collatz(sayi);
-
     return 0;
 }
-
 
 void collatz(int sayi){
 
     pid_t pid = fork();
 
-    if (pid == 0)
-    {
+    if (pid == 0){
         printf("Child process calisiyor...\n");
         printf("%d\n", sayi);
         while (sayi != 1)
@@ -43,8 +39,7 @@ void collatz(int sayi){
 
         printf("Child process tamamlandi.\n");
     }
-    else
-    {
+    else{
         printf("Parent process bekliyor...\n");
         wait();
         printf("Parent process tamamlandi.\n");
